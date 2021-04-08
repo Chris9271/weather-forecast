@@ -32,7 +32,7 @@ const WeatherProvider = (props) => {
             
             const api_Key = "d71a9be8035383620b15adbe2de8713e"
             const weatherInfo = await axios.get(
-                `http://api.openweathermap.org/data/2.5/weather?q=${currentPlace.data.city}&units=metric&appid=${api_Key}`
+                `https://api.openweathermap.org/data/2.5/weather?q=${currentPlace.data.city}&units=metric&appid=${api_Key}`
             )
                 setDataStorage({
                     dt: weatherInfo.data.dt,
