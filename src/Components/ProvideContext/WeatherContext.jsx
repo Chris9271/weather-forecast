@@ -15,7 +15,7 @@ const WeatherProvider = (props) => {
 
     const cityWeather = async() => {
         try{
-            const ip_Key = "6361ccaee3f24df0ac3315c768fa3cf1"
+            const ip_Key = process.env.REACT_APP_IP_KEY
             const currentPlace = await axios.get(
                 `https://api.ipgeolocation.io/ipgeo?apiKey=${ip_Key}`
             )
@@ -24,13 +24,13 @@ const WeatherProvider = (props) => {
                     country: currentPlace.data.country_code2
                 })
 
-            const bg_Key = "_RR3auB717xB6-pWsho7j3v1wp3v6-Zuxq84iNM-c-w"
+            const bg_Key = process.env.REACT_APP_BG_KEY
             const backGroundPics = await axios.get(
                 `https://api.unsplash.com/search/photos?page=1&per_page=10&query=${currentPlace.data.city}&client_id=${bg_Key}`
             )
                 setCityPictures(backGroundPics.data.results[Math.floor(Math.random()*10)].urls.regular)
             
-            const api_Key = "d71a9be8035383620b15adbe2de8713e"
+            const api_Key = process.env.REACT_APP_API_KEY
             const weatherInfo = await axios.get(
                 `https://api.openweathermap.org/data/2.5/weather?q=${currentPlace.data.city}&units=metric&appid=${api_Key}`
             )
@@ -51,7 +51,7 @@ const WeatherProvider = (props) => {
                 })
 
             const futureWeather = await axios.get(
-                `http://api.openweathermap.org/data/2.5/onecall?lat=${weatherInfo.data.coord.lat}&lon=${weatherInfo.data.coord.lon}&exclude=minutely&units=metric&appid=${api_Key}`
+                `https://api.openweathermap.org/data/2.5/onecall?lat=${weatherInfo.data.coord.lat}&lon=${weatherInfo.data.coord.lon}&exclude=minutely&units=metric&appid=${api_Key}`
             )
                 setFutureWeather({
                     // Hourly
@@ -115,15 +115,15 @@ const WeatherProvider = (props) => {
     // Another City
     const nextCityWeather = async() => {
         try{
-            const bg_Key = "_RR3auB717xB6-pWsho7j3v1wp3v6-Zuxq84iNM-c-w"
+            const bg_Key = process.env.REACT_APP_BG_KEY
             const backGroundPics = await axios.get(
                 `https://api.unsplash.com/search/photos?page=1&per_page=10&query=${newCity}&client_id=${bg_Key}`
             )
                 setCityPictures(backGroundPics.data.results[Math.floor(Math.random()*10)].urls.regular)
             
-            const api_Key = "d71a9be8035383620b15adbe2de8713e"
+            const api_Key = process.env.REACT_APP_API_KEY
             const weatherInfo = await axios.get(
-                `http://api.openweathermap.org/data/2.5/weather?q=${newCity}&units=metric&appid=${api_Key}`
+                `https://api.openweathermap.org/data/2.5/weather?q=${newCity}&units=metric&appid=${api_Key}`
             )
                 setDataStorage({
                     dt: weatherInfo.data.dt,
@@ -142,7 +142,7 @@ const WeatherProvider = (props) => {
                 })
 
             const futureWeather = await axios.get(
-                `http://api.openweathermap.org/data/2.5/onecall?lat=${weatherInfo.data.coord.lat}&lon=${weatherInfo.data.coord.lon}&exclude=minutely&units=metric&appid=${api_Key}`
+                `https://api.openweathermap.org/data/2.5/onecall?lat=${weatherInfo.data.coord.lat}&lon=${weatherInfo.data.coord.lon}&exclude=minutely&units=metric&appid=${api_Key}`
             )
                 setFutureWeather({
                     // Hourly
