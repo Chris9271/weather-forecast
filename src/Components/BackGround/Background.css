@@ -1,0 +1,33 @@
+.background-img{
+    filter: brightness(50%); /*更改背景的亮暗程度*/
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow-x: scroll;
+}
+
+/***** Responsive Area *****/
+@media screen and (max-width: 768px){
+    .background-img{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .background-img{
+        height: 85vh;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .background-img{
+        height: 90vh;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .background-img{
+        height: 95vh;
+    }
+}

@@ -1,0 +1,21 @@
+.temp-chart{
+    width: 100%;
+    height: 30vh;
+}
+
+#chart{
+    position: relative;
+    margin-top: 5rem;
+}
+
+/***** Responsive Area *****/
+@media screen and (max-width: 768px){
+    #chart{
+        position: relative;
+        margin-top: 0;
+    }
+
+    .temp-chart{
+        height: 30vh;
+    }
+}

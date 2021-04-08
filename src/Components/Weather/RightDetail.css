@@ -1,0 +1,160 @@
+.Side-Info{
+    background-color: lightgrey;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 70%;
+    overflow-x: scroll;
+}
+
+.toggle-wrapper{
+    height: 3.5rem;
+    background: rgb(54, 54, 54);
+    position: relative;
+}
+
+.toggle-switch{
+    width: 3.5rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    position: absolute;
+}
+
+.convert-btn{
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 3.8rem;
+    height: 1.7rem;
+    background-color: rgb(235, 233, 233);
+    border-radius: 2rem;
+}
+
+.unit{
+    margin: 0 0.4rem;
+    font-weight: 700;
+}
+
+.fahrenheit{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #525151;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(.2rem);
+    transition: all 2ms ease;
+}
+
+.celsius{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #525151;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(2.1rem);
+    transition: all 2ms ease;
+}
+
+.up-info,
+.down-info{
+    margin: 1rem;
+}
+
+.future-info{
+    display: flex
+}
+
+.title{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+}
+
+.data-font{
+    font-weight: 500;
+}
+
+.future-icon{
+    width: 50px;
+    height: 50px;
+}
+
+tr{
+    border-bottom: none;
+}
+
+.down-info td{
+    padding: 0;
+}
+
+/***** Responsive Area *****/
+@media screen and (max-width: 768px){
+    .toggle-wrapper{
+        display: none;
+    }
+
+    .Side-Info{
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 45vh;
+        left: 0;
+        justify-content: space-around;
+    }
+
+    .up-info,
+    .down-info{
+        width: 100%;
+        margin: 1.5rem;
+    }
+
+    .title{
+        text-align: center;
+        border-bottom: 1px solid black;
+        font-size: 1.5rem;
+    }
+
+    .data-font{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .title{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .data-font{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .title{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .up-info,
+    .down-info{
+        margin: 1rem;
+    }
+
+    .title{
+        font-size: 1rem;
+    }
+
+    .data-font{
+        font-size: 0.9rem;
+    }
+}
