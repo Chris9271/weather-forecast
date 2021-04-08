@@ -79,7 +79,7 @@ const RightDetail = ({detail, futureDetail, tempUnit, convertTemp, celToFah}) =>
                     <tbody>
                         <tr>
                             <td className="data-font">{futureDetail.d_dt1}</td>
-                            <td className="data-font"><img src={`http://openweathermap.org/img/wn/${futureDetail.d_icon1}@2x.png`} alt=""   className="future-icon"/></td>
+                            <td className="data-font"><img src={`https://openweathermap.org/img/wn/${futureDetail.d_icon1}@2x.png`} alt=""   className="future-icon"/></td>
                             {!convertTemp ?
                             <td className="data-font">{futureDetail.d_temp1} °C</td>
                             :
@@ -90,7 +90,7 @@ const RightDetail = ({detail, futureDetail, tempUnit, convertTemp, celToFah}) =>
                     <tbody>
                         <tr>
                             <td className="data-font">{futureDetail.d_dt2}</td>
-                            <td className="data-font"><img src={`http://openweathermap.org/img/wn/${futureDetail.d_icon2}@2x.png`} alt=""   className="future-icon"/></td>
+                            <td className="data-font"><img src={`https://openweathermap.org/img/wn/${futureDetail.d_icon2}@2x.png`} alt=""   className="future-icon"/></td>
                             {!convertTemp ?
                             <td className="data-font">{futureDetail.d_temp2} °C</td>
                             :
@@ -101,7 +101,7 @@ const RightDetail = ({detail, futureDetail, tempUnit, convertTemp, celToFah}) =>
                     <tbody>
                         <tr>
                             <td className="data-font">{futureDetail.d_dt3}</td>
-                            <td className="data-font"><img src={`http://openweathermap.org/img/wn/${futureDetail.d_icon3}@2x.png`} alt=""   className="future-icon"/></td>
+                            <td className="data-font"><img src={`https://openweathermap.org/img/wn/${futureDetail.d_icon3}@2x.png`} alt=""   className="future-icon"/></td>
                             {!convertTemp ?
                             <td className="data-font">{futureDetail.d_temp3} °C</td>
                             :
@@ -112,7 +112,7 @@ const RightDetail = ({detail, futureDetail, tempUnit, convertTemp, celToFah}) =>
                     <tbody>
                         <tr>
                             <td className="data-font">{futureDetail.d_dt4}</td>
-                            <td className="data-font"><img src={`http://openweathermap.org/img/wn/${futureDetail.d_icon4}@2x.png`} alt=""   className="future-icon"/></td>
+                            <td className="data-font"><img src={`https://openweathermap.org/img/wn/${futureDetail.d_icon4}@2x.png`} alt=""   className="future-icon"/></td>
                             {!convertTemp ?
                             <td className="data-font">{futureDetail.d_temp4} °C</td>
                             :
@@ -123,7 +123,7 @@ const RightDetail = ({detail, futureDetail, tempUnit, convertTemp, celToFah}) =>
                     <tbody>
                         <tr>
                             <td className="data-font">{futureDetail.d_dt5}</td>
-                            <td className="data-font"><img src={`http://openweathermap.org/img/wn/${futureDetail.d_icon5}@2x.png`} alt=""   className="future-icon"/></td>
+                            <td className="data-font"><img src={`https://openweathermap.org/img/wn/${futureDetail.d_icon5}@2x.png`} alt=""   className="future-icon"/></td>
                             {!convertTemp ?
                             <td className="data-font">{futureDetail.d_temp5} °C</td>
                             :
@@ -134,7 +134,7 @@ const RightDetail = ({detail, futureDetail, tempUnit, convertTemp, celToFah}) =>
                     <tbody>
                         <tr>
                             <td className="data-font">{futureDetail.d_dt6}</td>
-                            <td className="data-font"><img src={`http://openweathermap.org/img/wn/${futureDetail.d_icon6}@2x.png`} alt=""   className="future-icon"/></td>
+                            <td className="data-font"><img src={`https://openweathermap.org/img/wn/${futureDetail.d_icon6}@2x.png`} alt=""   className="future-icon"/></td>
                             {!convertTemp ?
                             <td className="data-font">{futureDetail.d_temp6} °C</td>
                             :
@@ -145,7 +145,7 @@ const RightDetail = ({detail, futureDetail, tempUnit, convertTemp, celToFah}) =>
                     <tbody>
                         <tr>
                             <td className="data-font">{futureDetail.d_dt7}</td>
-                            <td className="data-font"><img src={`http://openweathermap.org/img/wn/${futureDetail.d_icon7}@2x.png`} alt=""   className="future-icon"/></td>
+                            <td className="data-font"><img src={`https://openweathermap.org/img/wn/${futureDetail.d_icon7}@2x.png`} alt=""   className="future-icon"/></td>
                             {!convertTemp ?
                             <td className="data-font">{futureDetail.d_temp7} °C</td>
                             :
