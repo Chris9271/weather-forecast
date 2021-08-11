@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 
+// create new context object, let other component can subscribe by using useContext
 const WeatherContext = React.createContext();
 
 const WeatherProvider = (props) => {
@@ -204,8 +205,8 @@ const WeatherProvider = (props) => {
     }
 
     const timeConverter = (dt, timezone) => {
-        let adjustTime = dt * 1000 + timezone * 1000;
-        let convertTime = new Date (adjustTime);
+        let adjustTime = dt * 1000 + timezone * 1000; //get milliseconds
+        let convertTime = new Date (adjustTime); // convert milliseconds to date
         let hour = `${(convertTime.getUTCHours() < 10) ? `0${convertTime.getUTCHours()}` : convertTime.getUTCHours()}`;
         let minute = `0${convertTime.getUTCMinutes()}`;
         let displayTime = `${hour}:${minute.substr(-2)}` 
@@ -322,6 +323,7 @@ const WeatherProvider = (props) => {
     },[])
 
     return (
+        // provide values to decendant consumer that using useContext
         <WeatherContext.Provider value={{cityPictures, dataStorage, futureWeather, handleSubmit, handleChange, currentCity, newCity, isLoading, isError, handleClick, isConvert, celsiusTofahrenheit}}>
             {props.children}
         </WeatherContext.Provider>

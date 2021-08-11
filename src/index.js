@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import {WeatherProvider} from './Components/ProvideContext/WeatherContext';
 
 ReactDOM.render(
+  // provide context to App and it's decendant
   <WeatherProvider>
     <App />
   </WeatherProvider>,

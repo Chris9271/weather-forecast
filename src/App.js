@@ -9,6 +9,8 @@ import {WeatherContext} from './Components/ProvideContext/WeatherContext';
 import './App.css';
 
 const App = () => {
+  // useContext is like Context.Consumer, it can access Context.Provider's value
+  // but only read and subscribe
   const loading = useContext(WeatherContext);
   const {isLoading, dataStorage, cityPictures, futureWeather, handleClick, isConvert, celsiusTofahrenheit} = loading;
 
